@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/in"
+            android:layout_width="fill_parent"
+            android:layout_height="323dp"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" >
+        </ListView>
+
+    </LinearLayout>
+
+    	<!-- <EditText
+        android:id="@+id/edit_text_out"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:ems="10" /> -->
+
+    	<!-- <Button
+    	    android:id="@+id/button_send"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="@string/send" /> -->
+    	
+    	 <!-- <Button
+    	     android:id="@+id/functions"
+    	     android:layout_width="wrap_content"
+    	     android:layout_height="wrap_content"
+    	     android:text="More Functions"
+    	     android:textColor="#000000" >
+    	 </Button> -->
+
+     	<!-- <TextView
+        android:id="@+id/SeizureResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Seizure Result"
+        android:textColor="#000000" /> -->
+
+    
+    
+        
+        
+
+</LinearLayout>

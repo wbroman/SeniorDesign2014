@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:textColor="#FF0000" >
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seizure Detected"
+        android:textColor="#FF0000" >
+    </Button>
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Override"
+        android:textColor="#FF0000" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Function"
+        android:textColor="#FF0000" >
+    </Button>
+    
+     <Button
+        android:id="@+id/talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Data"
+        android:textColor="#FF0000" >
+    </Button>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Timer"
+        android:textColor="#FF0000" />
+
+    <TextView
+        android:id="@+id/sum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sum"
+        android:textColor="#FF0000" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stackFromBottom="true"
+        android:text="Result"
+        android:textColor="#FF0000"
+        android:transcriptMode="alwaysScroll" />
+
+    <TextView
+        android:id="@+id/GPS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS"
+        android:textColor="#FF0000" />
+	
+    <TextView
+        android:id="@+id/TextSeizure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Seizure Value"
+        android:textColor="#FF0000" />
+    
+    
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom ="81dp"
+        android:ems="10" />
+
+
+
+</LinearLayout>
