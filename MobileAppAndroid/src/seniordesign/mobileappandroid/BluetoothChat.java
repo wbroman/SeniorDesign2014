@@ -74,12 +74,7 @@ public class BluetoothChat extends Activity {
 
 	// Layout Views
 	private ListView mConversationView;
-	private EditText mOutEditText;
-	private Button mSendButton;
-	public Button mFunctionButton;
-	public TextView seizureResult;
-	public double [][]stored = new double[30000][1];
-	public static HjorthClass finalValue;
+	
 
 	// Name of the connected device
 	private String mConnectedDeviceName = null;
@@ -95,6 +90,25 @@ public class BluetoothChat extends Activity {
 	public Regression r;
 	public Regression2 r2;
 	public Regression3 r3;
+	
+	
+	TextView leftLung;
+	TextView rightLung;
+	TextView heart;
+	TextView liver;
+	TextView largeIntestine;
+	TextView smallIntestine;
+	TextView stomach;
+	TextView spleen;
+	TextView gallbladder;
+	TextView lKidney;
+	TextView rKidney;
+	TextView pancreas;
+	TextView venaCava;
+	TextView dAorta;
+	TextView aAorta;
+
+	
 
 
 	@Override
@@ -108,6 +122,7 @@ public class BluetoothChat extends Activity {
 
 		// Get local Bluetooth adapter
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+		
 
 		// If the adapter is null, then Bluetooth is not supported
 		if (mBluetoothAdapter == null) {
@@ -115,6 +130,23 @@ public class BluetoothChat extends Activity {
 			finish();
 			return;
 		}
+		
+
+		leftLung = (TextView) findViewById(R.id.lLungDamage);
+		rightLung = (TextView) findViewById(R.id.rLungDamage);
+		heart = (TextView) findViewById(R.id.heartDamage);
+		liver = (TextView) findViewById(R.id.liverDamage);
+		largeIntestine = (TextView) findViewById(R.id.lIntestineDamage);
+		smallIntestine = (TextView) findViewById(R.id.sIntestineDamage);
+		stomach = (TextView) findViewById(R.id.stomachDamage);
+		spleen = (TextView) findViewById(R.id.spleenDamage);
+		gallbladder = (TextView) findViewById(R.id.gallbladderDamage);
+		lKidney = (TextView) findViewById(R.id.lKidneyDamage);
+		rKidney = (TextView) findViewById(R.id.rKidneyDamage);
+		pancreas = (TextView) findViewById(R.id.pancreasDamage);
+		venaCava = (TextView) findViewById(R.id.venaCavaDamage);
+		dAorta = (TextView) findViewById(R.id.dAortaDamage);
+		aAorta = (TextView) findViewById(R.id.aAortaDamage);
 	}
 
 	@Override
@@ -214,7 +246,7 @@ public class BluetoothChat extends Activity {
 
 			// Reset out string buffer to zero and clear the edit text field
 			mOutStringBuffer.setLength(0);
-			mOutEditText.setText(mOutStringBuffer);
+			//mOutEditText.setText(mOutStringBuffer);
 		}
 	}
 
@@ -323,6 +355,22 @@ public class BluetoothChat extends Activity {
 
 					r = new Regression(x1, x2, y1, y2);
 					r.computation();
+					
+					leftLung.setText("Left Lung "+ r.leftLungDamage() +"% hit");
+					rightLung.setText("Right Lung "+ r.rightLungDamage() +"% hit");
+					heart.setText("Heart "+ r.heartDamage() +"% hit");
+					liver.setText("Liver "+ r.liverDamage() +"% hit");
+					smallIntestine.setText("Small Intestine "+ r.smIntestineDamage() +"% hit");
+					largeIntestine.setText("Large Intestine "+ r.lgIntestineDamage() +"% hit");
+					stomach.setText("Stomach "+ r.stomachDamage() +"% hit");
+					spleen.setText("Spleen "+ r.spleenDamage() +"% hit");
+					gallbladder.setText("Gallbladder "+ r.gallbladderDamage() +"% hit");
+					lKidney.setText("Left Kidney "+ r.lKidneyDamage() +"% hit");
+					rKidney.setText("Right Kidney "+ r.rKidneyDamage() +"% hit");
+					pancreas.setText("Pancreas "+ r.pancreasDamage() +"% hit");
+					venaCava.setText("Vena Cava "+ r.venaCavaDamage() +"% hit");
+					dAorta.setText("Descending Aorta "+ r.dAortaDamage() +"% hit");
+					aAorta.setText("Ascending Aorta "+ r.aAortaDamage() +"% hit");
 				}
 
 				if(readBuf.length == 6){
@@ -335,9 +383,25 @@ public class BluetoothChat extends Activity {
 
 					r2 = new Regression2(x1, y1, x2, y2, x3, y3);
 					r2.computation();
+					
+					leftLung.setText("Left Lung "+ r2.leftLungDamage() +"% hit");
+					rightLung.setText("Right Lung "+ r2.rightLungDamage() +"% hit");
+					heart.setText("Heart "+ r2.heartDamage() +"% hit");
+					liver.setText("Liver "+ r2.liverDamage() +"% hit");
+					smallIntestine.setText("Small Intestine "+ r2.smIntestineDamage() +"% hit");
+					largeIntestine.setText("Large Intestine "+ r2.lgIntestineDamage() +"% hit");
+					stomach.setText("Stomach "+ r2.stomachDamage() +"% hit");
+					spleen.setText("Spleen "+ r2.spleenDamage() +"% hit");
+					gallbladder.setText("Gallbladder "+ r2.gallbladderDamage() +"% hit");
+					lKidney.setText("Left Kidney "+ r2.lKidneyDamage() +"% hit");
+					rKidney.setText("Right Kidney "+ r2.rKidneyDamage() +"% hit");
+					pancreas.setText("Pancreas "+ r2.pancreasDamage() +"% hit");
+					venaCava.setText("Vena Cava "+ r2.venaCavaDamage() +"% hit");
+					dAorta.setText("Descending Aorta "+ r2.dAortaDamage() +"% hit");
+					aAorta.setText("Ascending Aorta "+ r2.aAortaDamage() +"% hit");
 				}
 
-				if(readBuf.length == 6){
+				if(readBuf.length == 8){
 					double x1 = coordinates[0];
 					double x2 = coordinates[1];
 					double y1 = coordinates[2];
@@ -349,8 +413,26 @@ public class BluetoothChat extends Activity {
 
 					r3 = new Regression3(x1, y1, x2, y2, x3, y3, x4, y4);
 					r3.computation();
+					
+					leftLung.setText("Left Lung "+ r3.leftLungDamage() +"% hit");
+					rightLung.setText("Right Lung "+ r3.rightLungDamage() +"% hit");
+					heart.setText("Heart "+ r3.heartDamage() +"% hit");
+					liver.setText("Liver "+ r3.liverDamage() +"% hit");
+					smallIntestine.setText("Small Intestine "+ r3.smIntestineDamage() +"% hit");
+					largeIntestine.setText("Large Intestine "+ r3.lgIntestineDamage() +"% hit");
+					stomach.setText("Stomach "+ r3.stomachDamage() +"% hit");
+					spleen.setText("Spleen "+ r3.spleenDamage() +"% hit");
+					gallbladder.setText("Gallbladder "+ r3.gallbladderDamage() +"% hit");
+					lKidney.setText("Left Kidney "+ r3.lKidneyDamage() +"% hit");
+					rKidney.setText("Right Kidney "+ r3.rKidneyDamage() +"% hit");
+					pancreas.setText("Pancreas "+ r3.pancreasDamage() +"% hit");
+					venaCava.setText("Vena Cava "+ r3.venaCavaDamage() +"% hit");
+					dAorta.setText("Descending Aorta "+ r3.dAortaDamage() +"% hit");
+					aAorta.setText("Ascending Aorta "+ r3.aAortaDamage() +"% hit");
 				}
 
+
+				
 				break;
 				
 			case MESSAGE_DEVICE_NAME:

@@ -40,6 +40,141 @@
         android:layout_height="wrap_content"
         android:text="Seizure Result"
         android:textColor="#000000" /> -->
+        
+            <TextView
+        android:id="@+id/lLungDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/rLungDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lLungDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/heartDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rLungDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/liverDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/heartDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/lIntestineDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/liverDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/sIntestineDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lIntestineDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/stomachDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sIntestineDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/spleenDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stomachDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/gallbladderDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spleenDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/lKidneyDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/gallbladderDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/rKidneyDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lKidneyDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/pancreasDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rKidneyDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/venaCavaDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pancreasDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/dAortaDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/venaCavaDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
+
+    <TextView
+        android:id="@+id/aAortaDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dAortaDamage"
+        android:layout_marginLeft="24dp"
+        android:text="Test" />
 
     
     

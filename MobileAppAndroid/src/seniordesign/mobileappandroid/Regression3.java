@@ -29,21 +29,21 @@ public class Regression3  {
 
 	double x1,y1,x2,y2,x3,y3,x4,y4;
 	
-	leftLung = (TextView) findViewById(R.id.lLungDamage);
-	rightLung = (TextView) findViewById(R.id.rLungDamage);
-	heart = (TextView) findViewById(R.id.heartDamage);
-	liver = (TextView) findViewById(R.id.liverDamage);
-	largeIntestine = (TextView) findViewById(R.id.lIntestineDamage);
-	smallIntestine = (TextView) findViewById(R.id.sIntestineDamage);
-	stomach = (TextView) findViewById(R.id.stomachDamage);
-	spleen = (TextView) findViewById(R.id.spleenDamage);
-	gallbladder = (TextView) findViewById(R.id.gallbladderDamage);
-	lKidney = (TextView) findViewById(R.id.lKidneyDamage);
-	rKidney = (TextView) findViewById(R.id.rKidneyDamage);
-	pancreas = (TextView) findViewById(R.id.pancreasDamage);
-	venaCava = (TextView) findViewById(R.id.venaCavaDamage);
-	dAorta = (TextView) findViewById(R.id.dAortaDamage);
-	aAorta = (TextView) findViewById(R.id.aAortaDamage);
+//	leftLung = (TextView) findViewById(R.id.lLungDamage);
+//	rightLung = (TextView) findViewById(R.id.rLungDamage);
+//	heart = (TextView) findViewById(R.id.heartDamage);
+//	liver = (TextView) findViewById(R.id.liverDamage);
+//	largeIntestine = (TextView) findViewById(R.id.lIntestineDamage);
+//	smallIntestine = (TextView) findViewById(R.id.sIntestineDamage);
+//	stomach = (TextView) findViewById(R.id.stomachDamage);
+//	spleen = (TextView) findViewById(R.id.spleenDamage);
+//	gallbladder = (TextView) findViewById(R.id.gallbladderDamage);
+//	lKidney = (TextView) findViewById(R.id.lKidneyDamage);
+//	rKidney = (TextView) findViewById(R.id.rKidneyDamage);
+//	pancreas = (TextView) findViewById(R.id.pancreasDamage);
+//	venaCava = (TextView) findViewById(R.id.venaCavaDamage);
+//	dAorta = (TextView) findViewById(R.id.dAortaDamage);
+//	aAorta = (TextView) findViewById(R.id.aAortaDamage);
 
 	public Regression3(double x1,double y1,double x2, double y2,double x3,double y3,double x4,double y4)
 	{
@@ -159,23 +159,97 @@ public class Regression3  {
 //		System.out.println("Vena Cava "+ venaCavaDamage +"% hit");
 //		System.out.println("Descending Aorta "+ dAortaDamage +"% hit");
 //		System.out.println("Ascending Aorta "+ aAortaDamage +"% hit");
-		
-		leftLung.setText("Left Lung "+ lLungDamage +"% hit");
-		rightLung.setText("Right Lung "+ rLungDamage +"% hit");
-		heart.setText("Heart "+ heartDamage +"% hit");
-		liver.setText("Liver "+ liverDamage +"% hit");
-		smallIntestine.setText("Small Intestine "+ sIntestineDamage +"% hit");
-		largeIntestine.setText("Large Intestine "+ lIntestineDamage +"% hit");
-		stomach.setText("Stomach "+ stomachDamage +"% hit");
-		spleen.setText("Spleen "+ spleenDamage +"% hit");
-		gallbladder.setText("Gallbladder "+ gallbladderDamage +"% hit");
-		lKidney.setText("Left Kidney "+ lKidneyDamage +"% hit");
-		rKidney.setText("Right Kidney "+ rKidneyDamage +"% hit");
-		pancreas.setText("Pancreas "+ pancreasDamage +"% hit");
-		venaCava.setText("Vena Cava "+ venaCavaDamage +"% hit");
-		dAorta.setText("Descending Aorta "+ dAortaDamage +"% hit");
-		aAorta.setText("Ascending Aorta "+ aAortaDamage +"% hit");
 
+	}
+	
+public double leftLungDamage(){
+		
+		return lLungDamage;
+		
+	}
+	
+	public double rightLungDamage(){
+		
+		return rLungDamage;
+		
+	}
+	
+	public double heartDamage(){
+		
+		return heartDamage;
+		
+	}
+	
+	public double liverDamage(){
+		
+		return liverDamage;
+		
+	}
+	
+	public double lgIntestineDamage(){
+		
+		return lIntestineDamage;
+		
+	}
+	
+	public double smIntestineDamage(){
+		
+		return sIntestineDamage;
+		
+	}
+	
+	public double stomachDamage(){
+		
+		return stomachDamage;
+		
+	}
+	
+	public double spleenDamage(){
+		
+		return spleenDamage;
+		
+	}
+	
+	public double gallbladderDamage(){
+		
+		return gallbladderDamage;
+		
+	}
+	
+	public double lKidneyDamage(){
+		
+		return lKidneyDamage;
+		
+	}
+	
+	public double rKidneyDamage(){
+		
+		return rKidneyDamage;
+		
+	}
+	
+	public double pancreasDamage(){
+		
+		return pancreasDamage;
+		
+	}
+	
+	public double venaCavaDamage(){
+		
+		return venaCavaDamage;
+		
+	}
+	
+	public double dAortaDamage(){
+		
+		return dAortaDamage;
+		
+	}
+	
+	public double aAortaDamage(){
+
+		return aAortaDamage;
+		
 	}
 
 	public static boolean checkSlope(double slope1,double slope2)//Determines what points are in my range
