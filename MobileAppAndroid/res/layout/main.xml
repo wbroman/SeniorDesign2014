@@ -48,7 +48,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Left Lung" />
 
     <TextView
         android:id="@+id/rLungDamage"
@@ -57,7 +57,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/lLungDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Right Lung" />
 
     <TextView
         android:id="@+id/heartDamage"
@@ -66,7 +66,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/rLungDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Heart" />
 
     <TextView
         android:id="@+id/liverDamage"
@@ -75,7 +75,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/heartDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Liver" />
 
     <TextView
         android:id="@+id/lIntestineDamage"
@@ -84,7 +84,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/liverDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Large Intestine" />
 
     <TextView
         android:id="@+id/sIntestineDamage"
@@ -93,7 +93,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/lIntestineDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Small Intestine" />
 
     <TextView
         android:id="@+id/stomachDamage"
@@ -102,7 +102,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/sIntestineDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Stomach" />
 
     <TextView
         android:id="@+id/spleenDamage"
@@ -111,7 +111,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/stomachDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Spleen" />
 
     <TextView
         android:id="@+id/gallbladderDamage"
@@ -120,7 +120,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/spleenDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Gallbladder" />
 
     <TextView
         android:id="@+id/lKidneyDamage"
@@ -129,7 +129,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/gallbladderDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Left Kidney" />
 
     <TextView
         android:id="@+id/rKidneyDamage"
@@ -138,7 +138,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/lKidneyDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Right Kidney" />
 
     <TextView
         android:id="@+id/pancreasDamage"
@@ -147,7 +147,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/rKidneyDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Pancreas" />
 
     <TextView
         android:id="@+id/venaCavaDamage"
@@ -156,7 +156,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/pancreasDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Vena Cava" />
 
     <TextView
         android:id="@+id/dAortaDamage"
@@ -165,7 +165,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/venaCavaDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Descending Aorta" />
 
     <TextView
         android:id="@+id/aAortaDamage"
@@ -174,7 +174,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/dAortaDamage"
         android:layout_marginLeft="24dp"
-        android:text="Test" />
+        android:text="Ascending Aorta" />
 
     
     

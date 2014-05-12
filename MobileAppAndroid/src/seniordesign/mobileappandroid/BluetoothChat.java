@@ -25,6 +25,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -43,7 +44,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.IOException;
 import java.math.*;
+import java.util.Arrays;
 
 
 import seniordesign.mobileappandroid.BluetoothChat;
@@ -108,6 +112,37 @@ public class BluetoothChat extends Activity {
 	TextView dAorta;
 	TextView aAorta;
 
+//	private DataThread mThread;
+//	
+//	public final class DataThread extends AsyncTask<Void, Void, Void>{
+//
+//		@Override
+//		protected Void doInBackground(Void... params) {
+//			// TODO Auto-generated method stub
+//			while(!isCancelled() && !isFinishing()) {
+//				Message msg = new Message();
+//				msg.obj = new byte[] { 4, 15, 23, 29, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+//						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+//				msg.arg1 = 4;
+//				msg.arg2 = -1;
+//				msg.what = MESSAGE_READ;
+//				mHandler.sendMessage(msg);
+//				
+//				try{
+//					Thread.sleep(10000);
+//				}catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//			
+//			return null;
+//		}
+//		
+//	}
 	
 
 
@@ -313,16 +348,17 @@ public class BluetoothChat extends Activity {
 			case MESSAGE_READ:
 
 				byte[] readBuf = (byte[]) msg.obj;
-				String readMessage = new String(readBuf);
+				String readMessage = new String(Arrays.toString(readBuf));
+				Log.d(TAG, "Message Received: " + Arrays.toString(readBuf));
 				mConversationArrayAdapter.add(readMessage);
-
-				/*
-				*To make the identification of what regression program to use, I have calculated the length
-				*of readBuf[].  This is necessary as not all layers of the ballistic vest will have
-				*been hit and there needed to be a way to identify the use cases of each.
-				*/
+//				int a = readBuf.length;
 				
-				int a = readBuf.length;
+//				byte[] mThread = (byte[]) msg.obj;
+//				String readMessage = new String(Arrays.toString(mThread));
+//				Log.d(TAG, "Message Received: " + Arrays.toString(mThread));
+//				mConversationArrayAdapter.add(readMessage);
+				
+				int a = msg.arg1;
 
 				//coordinates[] is the exact length necessary as given by double[a], and contains no more and
 				//no fewer positions than required.
@@ -334,6 +370,7 @@ public class BluetoothChat extends Activity {
 				for(int i=0; i<a; i++){
 					
 					int val=readBuf[i];
+//					int val=mThread[i];
 					
 					/*
 					*(int) val/8 will divide val and round down to the nearest integer.
@@ -347,7 +384,7 @@ public class BluetoothChat extends Activity {
 
 				//The code below is using the length of readBuf[] to determine which regression program to use.
 				
-				if(readBuf.length==4){
+				if(msg.arg1==4){
 					double x1 = coordinates[0];
 					double x2 = coordinates[1];
 					double y1 = coordinates[2];
@@ -373,7 +410,7 @@ public class BluetoothChat extends Activity {
 					aAorta.setText("Ascending Aorta "+ r.aAortaDamage() +"% hit");
 				}
 
-				if(readBuf.length == 6){
+				if(msg.arg1 == 6){
 					double x1 = coordinates[0];
 					double x2 = coordinates[1];
 					double y1 = coordinates[2];
@@ -401,7 +438,7 @@ public class BluetoothChat extends Activity {
 					aAorta.setText("Ascending Aorta "+ r2.aAortaDamage() +"% hit");
 				}
 
-				if(readBuf.length == 8){
+				if(msg.arg1 == 8){
 					double x1 = coordinates[0];
 					double x2 = coordinates[1];
 					double y1 = coordinates[2];
@@ -430,7 +467,6 @@ public class BluetoothChat extends Activity {
 					dAorta.setText("Descending Aorta "+ r3.dAortaDamage() +"% hit");
 					aAorta.setText("Ascending Aorta "+ r3.aAortaDamage() +"% hit");
 				}
-
 
 				
 				break;
